@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffc4d9">
+<title>For you, cutie</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌷</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600&family=Sacramento&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="petals" aria-hidden="true"></canvas>
+<button id="music" aria-label="Music" aria-pressed="false">♪</button>
+<button id="lucky" aria-label="Our lucky number"></button>
+<main>
+  <section id="gate" class="scene on">
+    <button id="open" aria-label="Tap here, cutie">
+      <svg id="bud" viewBox="-150 -190 300 440" aria-hidden="true"></svg>
+      <span class="tap">tap here, cutie</span>
+    </button>
+  </section>
+
+  <section id="bouquet" class="scene" hidden>
+    <div class="stage"><svg id="flowers" viewBox="30 20 540 730" aria-label="A bouquet of twelve flowers"></svg></div>
+    <div class="words">
+      <p class="pre" id="hello"></p>
+      <h1 class="ily" tabindex="-1">I love you</h1>
+      <div class="timer"></div>
+      <div class="note" aria-live="polite"><p id="note">Tap the flowers. Each one is hiding something.</p></div>
+      <p class="count" id="count"></p>
+      <button class="btn" id="toQ">I have some questions for you</button>
+    </div>
+  </section>
+
+  <section id="ask" class="scene" hidden>
+    <div class="row" id="progress" aria-hidden="true"></div>
+    <h2 id="q" tabindex="-1"></h2>
+    <div id="arena"></div>
+    <p id="reply" aria-live="polite"></p>
+    <button class="btn" id="next" hidden></button>
+  </section>
+
+  <section id="mail" class="scene" hidden>
+    <button id="envelope" aria-label="Open the letter">
+      <span class="flap"></span><span class="seal">♥</span>
+    </button>
+    <p class="pre" id="mailHint">Something for you. Open it.</p>
+    <article id="letter" hidden></article>
+    <button class="btn" id="toEnd" hidden>One last thing</button>
+  </section>
+
+  <section id="end" class="scene" hidden>
+    <div class="stage"><svg id="flowers2" viewBox="30 -50 540 800" aria-label="The full bouquet"></svg></div>
+    <div class="words">
+      <p class="pre">Your answers grew six new flowers.</p>
+      <h2 class="ily" id="langs" tabindex="-1">I love you</h2>
+      <div class="timer"></div>
+      <ul id="answers"></ul>
+      <p class="count">Screenshot this and send it to me.</p>
+      <button class="btn" id="again">See it all again</button>
+    </div>
+  </section>
+</main>
+<script src="config.js"></script>
+<script src="background.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
